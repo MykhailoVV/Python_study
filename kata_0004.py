@@ -8,14 +8,13 @@ Note: The function accepts an integer and returns an integer
 
 
 def square_digits(num):
-    res = int(
+    return int(
         ''.join([
             str(
                 int(i) ** 2
             ) for i in str(num)
         ])
     )
-    return res
 
 
 print(square_digits(num=int(input())))
