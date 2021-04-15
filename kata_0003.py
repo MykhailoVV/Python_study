@@ -10,9 +10,15 @@ Note: for this kata y isn't considered a vowel.
 
 
 def disemvowel(string_):
-    return ''.join(['' if letter.lower() in ('a', 'e', 'i', 'o', 'u') else
-                    letter for letter in string_])
+    return ''.join(
+                    [
+                        '' if letter.lower() in (
+                            'a', 'e', 'i', 'o', 'u'
+                        )
+                        else
+                        letter for letter in string_
+                    ]
+            )
 
 
-comment = input()
-print(disemvowel(comment))
+print(disemvowel(string_=input()))
