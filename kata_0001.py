@@ -25,5 +25,6 @@ def is_square(n):
     return False if n < 0 or (n ** 0.5) % 1 != 0 else True
 
 
+# Chek number if a square number
 checked_number = int(input())
 print(is_square(checked_number))
