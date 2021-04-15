@@ -26,5 +26,4 @@ def is_square(n):
 
 
 # Chek number if a square number
-checked_number = int(input())
-print(is_square(checked_number))
+print(is_square(int(input())))
