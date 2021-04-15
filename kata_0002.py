@@ -12,5 +12,5 @@ def add_binary(a, b):
     return str(x[2:len(x)])
 
 
-a, b = int(input()), int(input())
+a, b = [int(i) for i in input().split()]
 print(add_binary(a, b))
