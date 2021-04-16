@@ -204,10 +204,10 @@ def clear_order(order: dict, products: list) -> dict:
         {
             'products': [
                 {'product_id':
-                     i['product_id']
+                     product['product_id']
                  }
-                for i in order['products']
-                if int(i['product_id']) in products]
+                for product in order['products']
+                if int(product['product_id']) in products]
         }
     )
     return order
@@ -215,9 +215,9 @@ def clear_order(order: dict, products: list) -> dict:
 
 def clear_orders(orders: list, products: list) -> list:
     new_orders = [
-        x
-        for x in orders
-        if clear_order(x, products)['products']
+        order
+        for order in orders
+        if clear_order(order, products)['products']
     ]
     return new_orders
 
