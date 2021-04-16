@@ -65,8 +65,8 @@ def clear_order(order: list, products: list):
                 if int(i['product_id']) in products]
         }
     )
+    return order
 
 
 if __name__ == "__main__":
-    clear_order(order=order, products=products_id_on_warehouse)
-    print(order)
+    print(clear_order(order=order, products=products_id_on_warehouse))
