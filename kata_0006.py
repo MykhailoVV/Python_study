@@ -10,7 +10,7 @@ Notes:
 
 
 def high_and_low(numbers: str):
-    lst1 = [int(i) for i in numbers.split()]
+    lst1 = [int(number) for number in numbers.split()]
     lst1.sort()
     return str(lst1[-1]) + ' ' + str(lst1[0])
 
