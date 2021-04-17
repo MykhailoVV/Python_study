@@ -22,14 +22,14 @@ number; if n == 0, then return an empty array (except in C return NULL) and be
 """
 
 
-def tribonacci(signature, n):
-    res = []
-    for i in range(n):
-        if i < len(signature):
-            res.append(signature[i])
+def tribonacci(signature: list, row_len: int) -> list:
+    result = []
+    for number in range(row_len):
+        if number < len(signature):
+            result.append(signature[number])
         else:
-            res.append(sum(res[-3:]))
-    return res
+            result.append(sum(result[-3:]))
+    return result
 
 
 print(tribonacci([3, 2, 1], 10))
