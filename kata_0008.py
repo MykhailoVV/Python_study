@@ -20,12 +20,12 @@ xbonacci {1,1} produces the Fibonacci sequence
 """
 
 
-def Xbonacci(signature, n):
-    res = signature[:n]
-    x = len(signature)
-    for i in range(n-x):
-        res.append(sum(res[-x:]))
-    return res
+def Xbonacci(signature, row_len):
+    result = signature[:row_len]
+    signature_len = len(signature)
+    for i in range(row_len-signature_len):
+        result.append(sum(result[-signature_len:]))
+    return result
 
 
 print(Xbonacci([1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 20))
