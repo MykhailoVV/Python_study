@@ -13,16 +13,16 @@ or array is also a valid sublist/subarray.
 """
 
 
-def max_sequence(arr):
-    max_sum = summ = start = end = 0
-    for pos in range(len(arr)):
-        end += 1
-        if summ < 0:
-            start = pos
-            end = pos + 1
-        summ = sum(arr[start:end])
-        if max_sum < summ:
-            max_sum = summ
+def max_sequence(given_array):
+    max_sum = current_sum = start_sub_array = end_sub_array = 0
+    for item in range(len(given_array)):
+        end_sub_array += 1
+        if current_sum < 0:
+            start_sub_array = item
+            end_sub_array = item + 1
+        current_sum = sum(given_array[start_sub_array:end_sub_array])
+        if max_sum < current_sum:
+            max_sum = current_sum
     return max_sum
 
 
